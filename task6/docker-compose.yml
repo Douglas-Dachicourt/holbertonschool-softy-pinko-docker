@@ -16,7 +16,7 @@ services:
     build:
       context: ./back-end
       dockerfile: Dockerfile
-    expose:
+    ports:
       - "5252"
 
   proxy:
