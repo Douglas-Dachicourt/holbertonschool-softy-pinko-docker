@@ -18,3 +18,15 @@ services:
       dockerfile: Dockerfile
     ports:
       - "5252:5252"
+
+  proxy:
+    image: my-proxy-image
+    build:
+      context: ./proxy
+      dockerfile: dockerfile
+    ports: 
+      - "80:80"
+    depends_on:
+      - frontend
+      - backend
+  
