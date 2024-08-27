@@ -23,7 +23,7 @@ services:
     image: my-proxy-image
     build:
       context: ./proxy
-      dockerfile: dockerfile
+      dockerfile: Dockerfile
     ports: 
       - "80:80"
     depends_on:
